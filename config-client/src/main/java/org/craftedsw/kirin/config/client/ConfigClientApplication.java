@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@RefreshScope
+@RefreshScope // make it refreshable with a refresh event sent trough actuator
 public class ConfigClientApplication {
 
     @Value("${my.userName}")

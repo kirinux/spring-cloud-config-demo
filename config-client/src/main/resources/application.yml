@@ -1,0 +1,21 @@
+logging:
+    level:
+        org:
+            springframework: DEBUG
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+    endpoint:
+        health:
+            show-details: always
+
+spring:
+    application:
+        name: myNameApplication
+    cloud:
+        config:
+            fail-fast: true
+    config:
+        import: optional:configserver:http://localhost:8888/
